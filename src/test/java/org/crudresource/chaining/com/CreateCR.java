@@ -10,7 +10,8 @@ public class CreateCR extends BaseClass{
 		String Sys_id = resp.jsonPath().get("result.sys_id");
 		
 		System.out.println("Sys id value is : "+Sys_id);
-		resp.then().assertThat().statusCode(201).log().all();
+		resp.then().assertThat().statusCode(201);
+		resp.then().log().all();
 
 	}
 
